@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        
         <link rel="stylesheet" href="assets/css/styles.css">
         
         <!-- FAVICON -->
@@ -27,6 +27,7 @@
                         <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#casestudies" class="nav__link">Case Studies</a></li>
+                        <li class="nav__item"><a href="#prompts" class="nav__link">AI Prompts</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
@@ -49,7 +50,7 @@
                 </div>
 
                 <div class="home__social">
-                    <a href="https://www.https://www.linkedin.com/in/andres-ruiz-velez/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.linkedin.com/in/andres-ruiz-velez/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
                     <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
                     <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
                 </div>
@@ -83,27 +84,96 @@
                 </div>
             </section>
 
-            <!--===== CASE STUDIES =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Case Studies</h2>
+            <!-- ===== CASE STUDIES ===== -->
+            <section class="work section" id="casestudies">
+            <h2 class="section-title">Case Studies</h2>
 
-                <article class="work__container bd-grid" style="row-gap:1.5rem">
-                    <div class="work__img">
-                    <img src="assets/img/work1.jpg" alt="Project thumbnail">
+                <article class="case bd-grid">
+                    <div class="case__media">
+                    <img src="assets/img/work2.jpg" alt="Project thumbnail">
                     </div>
-                    <div>
-                    <h3>Project Name — Outcome-focused title</h3>
-                    <p><strong>Context:</strong> Who’s the user? What problem/opportunity?</p>
-                    <p><strong>Role:</strong> Your responsibilities (discovery, roadmap, GTM, etc.)</p>
-                    <p><strong>Process:</strong> Research → Insights → Prioritization → Experiments → Delivery</p>
-                    <p><strong>Impact:</strong> Key metrics (e.g., +22% activation, −18% churn, +$Xm ARR)</p>
-                    <div style="margin-top:.75rem">
-                        <a href="case-study-1.html" class="button">Read case study</a>
-                        <a href="#contact" class="button" style="margin-left:.5rem">Discuss</a>
+                    <div class="case__body">
+                    <h3>Case study 1 — Outcome-focused</h3>
+                    <p><strong>Context:</strong> Who’s the user?</p>
+                    <p><strong>Role:</strong> Discovery and roadmap</p>
+                    <p><strong>Process:</strong> Research → Insights</p>
+                    <p><strong>Impact:</strong> +22% activation</p>
+                    <div class="case__actions">
+                        <a href="" class="button">Read case study</a>
+                    </div>
+                    </div>
+                </article>
+
+                <article class="case bd-grid">
+                    <div class="case__media">
+                    <img src="assets/img/work3.jpg" alt="Project thumbnail">
+                    </div>
+                    <div class="case__body">
+                    <h3>Case study 2 — Great title</h3>
+                    <p><strong>Context:</strong> What opportunity?</p>
+                    <p><strong>Role:</strong> Roadmap and GTM</p>
+                    <p><strong>Process:</strong> Prioritization → Experiments</p>
+                    <p><strong>Impact:</strong> −18% churn, +10M ARR</p>
+                    <div class="case__actions">
+                        <a href="" class="button">Read case study</a>
                     </div>
                     </div>
                 </article>
             </section>
+            
+            <!-- ===== AI PROMPTS ===== -->
+            <section class="section" id="prompts">
+            <h2 class="section-title">AI Prompts</h2>
+
+            <div class="bd-grid" style="row-gap:1.25rem">
+
+                <!-- Prompt card -->
+                <details class="prompt">
+                <summary class="prompt__summary">
+                    <span class="prompt__title">Competitive Landscape Summary</span>
+                    <span class="prompt__tags">#strategy #market #research</span>
+                </summary>
+
+                <div class="prompt__meta">
+                    <span><strong>Goal:</strong> Summarize competitors and positioning for a quick brief.</span>
+                    <span><strong>Model:</strong> GPT-4o</span>
+                    <span><strong>Vars:</strong> {market}, {top_competitors}, {key_criteria}</span>
+                    <a href="https://github.com/YOURUSER/YOURREPO/blob/main/prompts/competitive_landscape.md" target="_blank" rel="noopener">View on GitHub</a>
+                </div>
+
+                <div class="prompt__block">
+                    <h4>System</h4>
+                    <pre class="prompt__code" data-role="system">You are a product strategist. Be concise, structured, and evidence-oriented. Flag assumptions and unknowns.</pre>
+                    <button class="button button--ghost prompt__copy" data-copy="prev">Copy system</button>
+                </div>
+
+                <div class="prompt__block">
+                    <h4>User Template</h4>
+                    <pre class="prompt__code" data-role="user">Market: {market}
+            Top competitors: {top_competitors}
+            Key criteria: {key_criteria}
+
+            Task:
+            1) Table: competitor vs. criteria (1–5 + short notes)
+            2) 3 insights (what matters)
+            3) Risks & unknowns
+            4) Suggested next research steps</pre>
+                    <button class="button button--ghost prompt__copy" data-copy="prev">Copy template</button>
+                </div>
+
+                <div class="prompt__block">
+                    <h4>Example</h4>
+                    <pre class="prompt__code">Market: product analytics for SMB SaaS
+            Top competitors: Mixpanel, Amplitude, PostHog
+            Key criteria: price, ease of setup, funnels, retention, integrations</pre>
+                </div>
+                </details>
+
+                <!-- Duplicate <details class="prompt"> ... </details> for more prompts -->
+
+            </div>
+            </section>
+
 
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
